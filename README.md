@@ -44,11 +44,21 @@ const private_2 =
 ```sh
 $ npx hardhat compile
 $ npx hardhat ignition deploy ./ignition/modules/PostBoard.ts --network localhost
+
+Deployed Addresses
+
+PostBoardModule#PostBoard - 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
 ```
 
-5. Copy `backend/artifacts/contracts/PostBoard.sol/PostBoard.json` to `frontend/src/abis/PostBoard.json`.
+5. Copy contract address to `frontend/src/app/page.tsx`:
 
-6. Setup frontend:
+```ts
+const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+```
+
+6. Copy `backend/artifacts/contracts/PostBoard.sol/PostBoard.json` to `frontend/src/abis/PostBoard.json`.
+
+7. Setup frontend:
 
 ```sh
 $ cd frontend
